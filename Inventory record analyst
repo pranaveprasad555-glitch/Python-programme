@@ -1,0 +1,16 @@
+stock = {}
+
+n = int(input("Enter number of products: "))
+for i in range(n):
+    name = input("Product name: ")
+    qty = int(input("Quantity: "))
+    price = float(input("Price: "))
+    stock[name] = [qty, price]
+
+total = 0
+for name in stock:
+    value = stock[name][0] * stock[name][1]
+    print(name, "value:", value)
+    total += value
+
+print("Total stock value:", total)
