@@ -1,0 +1,15 @@
+basic = float(input("Enter basic salary: "))
+
+hra = basic * 0.20
+da = basic * 0.10
+gross = basic + hra + da
+
+pf = basic * 0.12
+tax = gross * 0.05
+deductions = pf + tax
+
+net = gross - deductions
+
+print("Gross pay:", gross)
+print("Deductions:", deductions)
+print("Net salary:", net)
