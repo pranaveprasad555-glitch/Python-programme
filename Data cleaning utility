@@ -1,0 +1,9 @@
+out = open("cleaned.txt", "w")
+
+for line in open("input.txt"):
+    line = " ".join(line.split())
+    if line != "":
+        out.write(line + "\n")
+
+out.close()
+print(open("cleaned.txt").read())
