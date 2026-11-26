@@ -1,0 +1,8 @@
+phrase = input("Enter a phrase: ")
+
+cleaned = phrase.replace(" ", "").lower()
+
+if cleaned == cleaned[::-1]:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
