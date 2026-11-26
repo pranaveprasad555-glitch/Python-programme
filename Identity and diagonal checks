@@ -1,0 +1,28 @@
+n = int(input("Enter size n: "))
+
+print("Identity matrix:")
+for i in range(n):
+    for j in range(n):
+        print(1 if i == j else 0, end=" ")
+    print()
+
+print("Enter", n, "x", n, "matrix:")
+A = [list(map(int, input().split())) for i in range(n)]
+
+diagonal = True
+identity = True
+
+for i in range(n):
+    for j in range(n):
+        if i != j and A[i][j] != 0:
+            diagonal = False
+            identity = False
+        if i == j and A[i][j] != 1:
+            identity = False
+
+if identity:
+    print("Identity matrix")
+elif diagonal:
+    print("Diagonal matrix")
+else:
+    print("Neither identity nor diagonal")
