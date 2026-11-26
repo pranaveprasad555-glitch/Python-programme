@@ -1,0 +1,16 @@
+total_hours = 24
+sleep = float(input("Sleep hours: "))
+classes = float(input("Class hours: "))
+meals = float(input("Meals and travel hours: "))
+other = float(input("Other commitments hours: "))
+slot = float(input("Length of one study slot (hours): "))
+
+busy = sleep + classes + meals + other
+
+if min(sleep, classes, meals, other) < 0 or slot <= 0 or busy > total_hours:
+    print("Invalid input")
+else:
+    free = total_hours - busy
+    slots = int(free // slot)
+    print("Free hours:", free)
+    print("Study slots:", slots)
