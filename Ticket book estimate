@@ -1,0 +1,21 @@
+prices = {"child": 100, "adult": 200, "senior": 150}
+
+try:
+    age = int(input("Enter age: "))
+    qty = int(input("Enter quantity: "))
+except ValueError:
+    print("Invalid input")
+else:
+    if age < 0 or qty <= 0:
+        print("Invalid age or quantity")
+    else:
+        if age < 12:
+            category = "child"
+        elif age < 60:
+            category = "adult"
+        else:
+            category = "senior"
+
+        total = prices[category] * qty
+        print("Category:", category)
+        print("Total cost:", total)
