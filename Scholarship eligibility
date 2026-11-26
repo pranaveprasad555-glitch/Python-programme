@@ -1,0 +1,10 @@
+marks = float(input("Enter marks: "))
+income = float(input("Enter family income: "))
+attendance = float(input("Enter attendance %: "))
+
+if marks < 0 or marks > 100 or income < 0 or attendance < 0 or attendance > 100:
+    print("Invalid input")
+elif marks >= 60 and income <= 300000 and attendance >= 75:
+    print("Eligible")
+else:
+    print("Not eligible")
