@@ -1,0 +1,9 @@
+arrivals = int(input("Enter number of people in queue: "))
+service = float(input("Enter average service time per person (minutes): "))
+counters = int(input("Enter number of counters: "))
+
+if arrivals < 0 or service <= 0 or counters <= 0:
+    print("Invalid input")
+else:
+    wait = arrivals * service / counters
+    print("Estimated wait:", wait, "minutes")
