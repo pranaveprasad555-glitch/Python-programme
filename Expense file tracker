@@ -1,0 +1,16 @@
+n = int(input("Enter number of expenses: "))
+
+f = open("expenses.csv", "w")
+for i in range(n):
+    category = input("Category: ")
+    amount = input("Amount: ")
+    f.write(category + "," + amount + "\n")
+f.close()
+
+totals = {}
+for line in open("expenses.csv"):
+    category, amount = line.strip().split(",")
+    totals[category] = totals.get(category, 0) + float(amount)
+
+for category in totals:
+    print(category, ":", totals[category])
