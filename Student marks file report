@@ -1,0 +1,9 @@
+marks = [float(line) for line in open("marks.csv")]
+
+report = open("report.txt", "w")
+report.write("Min: " + str(min(marks)) + "\n")
+report.write("Max: " + str(max(marks)) + "\n")
+report.write("Average: " + str(sum(marks) / len(marks)) + "\n")
+report.close()
+
+print(open("report.txt").read())
