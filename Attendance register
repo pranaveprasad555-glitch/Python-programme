@@ -1,0 +1,15 @@
+name = input("Student name: ")
+days = int(input("Days present: "))
+total = int(input("Total days: "))
+
+if total <= 0 or days < 0 or days > total:
+    print("Invalid input")
+else:
+    f = open("attendance.txt", "a")
+    f.write(name + "," + str(days) + "," + str(total) + "\n")
+    f.close()
+
+    print("Saved records:")
+    for line in open("attendance.txt"):
+        n, d, t = line.strip().split(",")
+        print(n, ":", int(d) / int(t) * 100, "%")
