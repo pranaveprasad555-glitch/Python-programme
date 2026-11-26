@@ -1,0 +1,13 @@
+try:
+    balance = float(input("Enter balance: "))
+    amount = float(input("Enter amount to withdraw: "))
+except ValueError:
+    print("Invalid input")
+else:
+    if balance < 0 or amount <= 0:
+        print("Invalid input")
+    elif amount > balance:
+        print("Insufficient balance")
+    else:
+        balance = balance - amount
+        print("New balance:", balance)
