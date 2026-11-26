@@ -1,0 +1,12 @@
+usage = {}
+
+n = int(input("Enter number of activities: "))
+for i in range(n):
+    activity = input("Activity: ")
+    litres = float(input("Litres used: "))
+    usage[activity] = usage.get(activity, 0) + litres
+
+highest = max(usage, key=usage.get)
+
+print("Total water used:", sum(usage.values()))
+print("Highest:", highest, "-", usage[highest], "litres")
