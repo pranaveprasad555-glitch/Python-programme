@@ -1,0 +1,14 @@
+print("1.Celsius to Fahrenheit")
+print("2.Km to Miles")
+print("3.Kg to Pounds")
+c = input("Enter choice: ")
+value = float(input("Enter value: "))
+
+if c == "1":
+    print(value, "C =", value * 9 / 5 + 32, "F")
+elif c == "2":
+    print(value, "km =", value * 0.621371, "miles")
+elif c == "3":
+    print(value, "kg =", value * 2.20462, "lb")
+else:
+    print("Invalid choice")
