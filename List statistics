@@ -1,0 +1,12 @@
+n = int(input("Enter n: "))
+marks = []
+
+for i in range(n):
+    marks.append(float(input("Enter mark: ")))
+
+total = sum(marks)
+
+print("Min:", min(marks))
+print("Max:", max(marks))
+print("Sum:", total)
+print("Mean:", total / n)
