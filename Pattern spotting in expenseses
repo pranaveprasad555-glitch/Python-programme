@@ -1,0 +1,15 @@
+exp = list(map(float, input("Enter expenses: ").split()))
+
+print("Repeated values:")
+for x in set(exp):
+    if exp.count(x) > 1:
+        print(x, "appears", exp.count(x), "times")
+
+print("Trend:")
+for i in range(1, len(exp)):
+    if exp[i] > exp[i - 1]:
+        print(exp[i - 1], "->", exp[i], "Increase")
+    elif exp[i] < exp[i - 1]:
+        print(exp[i - 1], "->", exp[i], "Decrease")
+    else:
+        print(exp[i - 1], "->", exp[i], "Same")
