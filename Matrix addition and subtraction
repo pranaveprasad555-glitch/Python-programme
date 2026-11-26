@@ -1,0 +1,33 @@
+m = int(input("Enter rows: "))
+n = int(input("Enter columns: "))
+
+def read_matrix(name):
+    print("Enter matrix", name)
+    mat = []
+    for i in range(m):
+        mat.append(list(map(int, input().split())))
+    return mat
+
+A = read_matrix("A")
+B = read_matrix("B")
+
+if len(A) != len(B) or any(len(A[i]) != len(B[i]) for i in range(len(A))):
+    print("Dimensions are not equal")
+else:
+    add = []
+    sub = []
+    for i in range(m):
+        add.append([A[i][j] + B[i][j] for j in range(n)])
+        sub.append([A[i][j] - B[i][j] for j in range(n)])
+
+    print("Addition:")
+    for row in add:
+        for x in row:
+            print(f"{x:5}", end="")
+        print()
+
+    print("Subtraction:")
+    for row in sub:
+        for x in row:
+            print(f"{x:5}", end="")
+        print()
