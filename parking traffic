@@ -1,0 +1,22 @@
+import math
+
+try:
+    hours = float(input("Enter parking hours: "))
+except ValueError:
+    print("Invalid duration")
+else:
+    if hours < 0:
+        print("Invalid duration")
+    elif hours == 0:
+        print("No charge. Fee = 0")
+    else:
+        hours = math.ceil(hours)
+
+        if hours <= 2:
+            fee = 20
+        elif hours <= 5:
+            fee = 20 + (hours - 2) * 10
+        else:
+            fee = 20 + 3 * 10 + (hours - 5) * 8
+
+        print("Fee =", fee)
