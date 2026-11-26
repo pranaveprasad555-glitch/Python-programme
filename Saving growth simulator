@@ -1,0 +1,8 @@
+deposit = float(input("Enter monthly deposit: "))
+months = int(input("Enter number of months: "))
+
+balance = 0
+for i in range(months):
+    balance += deposit
+
+print("Final balance:", balance)
