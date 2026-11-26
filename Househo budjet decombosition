@@ -1,0 +1,15 @@
+income = 0
+spending = 0
+
+n = int(input("Enter number of entries: "))
+for i in range(n):
+    kind = input("Type (income/spending): ")
+    amount = float(input("Amount: "))
+    if kind == "income":
+        income += amount
+    else:
+        spending += amount
+
+print("Income:", income)
+print("Spending:", spending)
+print("Balance:", income - spending)
