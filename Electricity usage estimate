@@ -1,0 +1,10 @@
+prev = float(input("Enter previous reading: "))
+curr = float(input("Enter current reading: "))
+rate = float(input("Enter rate per unit: "))
+
+if curr < prev:
+    print("Invalid reading")
+else:
+    units = curr - prev
+    print("Units:", units)
+    print("Bill:", units * rate)
