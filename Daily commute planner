@@ -1,0 +1,40 @@
+distance = float(input("Enter distance to college (in km): "))
+
+speed = float(input("Enter average speed (km/hr): "))
+
+rate = float(input("Enter travel cost per km (Rs): "))
+
+mode = input("Enter transport mode (Bus/Auto/Bike): ")
+
+
+
+if distance <= 0 or speed <= 0 or rate < 0:
+
+    print("Invalid input. Please enter valid values.")
+
+else:
+
+    
+
+    time = (distance / speed) * 60
+
+    cost = distance * rate
+
+   
+
+
+    print("Transport Mode:", mode)
+
+    print("Distance:", distance, "km")
+
+    print("Estimated Travel Time:", round(time, 2), "minutes")
+
+    print("Estimated Travel Cost: Rs.", round(cost, 2))
+
+    if time <= 30:
+
+        print("Commute Status: Short journey")
+
+    else:
+
+        print("Commute Status: Long journey")
