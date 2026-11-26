@@ -1,0 +1,20 @@
+def add_item():
+    name = input("Item name: ")
+    qty = input("Quantity: ")
+    price = input("Price: ")
+    f = open("inventory.txt", "a")
+    f.write(name + "," + qty + "," + price + "\n")
+    f.close()
+
+def view_items():
+    for line in open("inventory.txt"):
+        print(line.strip())
+
+while True:
+    c = input("1.Add 2.View 3.Exit: ")
+    if c == "1":
+        add_item()
+    elif c == "2":
+        view_items()
+    elif c == "3":
+        break
