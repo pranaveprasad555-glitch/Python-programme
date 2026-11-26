@@ -1,0 +1,9 @@
+distance = float(input("Enter distance in km: "))
+
+if distance < 0:
+    print("Invalid distance")
+else:
+    base_rate = 12
+    surcharge = 30
+    fare = distance * base_rate + surcharge
+    print("Fare:", fare)
