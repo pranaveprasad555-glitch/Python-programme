@@ -1,0 +1,9 @@
+m = int(input("Enter rows: "))
+n = int(input("Enter columns: "))
+
+matrix = [list(map(int, input().split())) for i in range(m)]
+
+for j in range(n):
+    for i in range(m):
+        print(matrix[i][j], end=" ")
+    print()
