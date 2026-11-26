@@ -1,0 +1,16 @@
+n = int(input("Enter number of items: "))
+
+total = 0
+for i in range(n):
+    price = float(input("Price: "))
+    qty = int(input("Quantity: "))
+    total += price * qty
+
+delivery = 0 if total >= 500 else 50
+discount = total * 0.10 if total >= 1000 else 0
+payable = total + delivery - discount
+
+print("Item total:", total)
+print("Delivery:", delivery)
+print("Discount:", discount)
+print("Payable:", payable)
