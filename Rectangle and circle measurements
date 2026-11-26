@@ -1,0 +1,20 @@
+import math
+
+print("1.Rectangle 2.Square 3.Circle")
+c = input("Enter choice: ")
+
+if c == "1":
+    l = float(input("Length: "))
+    b = float(input("Breadth: "))
+    print("Area:", l * b)
+    print("Perimeter:", 2 * (l + b))
+elif c == "2":
+    s = float(input("Side: "))
+    print("Area:", s * s)
+    print("Perimeter:", 4 * s)
+elif c == "3":
+    r = float(input("Radius: "))
+    print("Area:", math.pi * r * r)
+    print("Circumference:", 2 * math.pi * r)
+else:
+    print("Invalid choice")
