@@ -1,0 +1,14 @@
+contacts = {}
+
+while True:
+    c = input("1.Add 2.Search 3.Update 4.Remove 5.Exit: ")
+
+    if c == "1" or c == "3":
+        name = input("Name: ")
+        contacts[name] = input("Phone: ")
+    elif c == "2":
+        print(contacts.get(input("Name: "), "Not found"))
+    elif c == "4":
+        contacts.pop(input("Name: "), None)
+    elif c == "5":
+        break
