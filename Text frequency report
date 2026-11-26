@@ -1,0 +1,10 @@
+s = input("Enter a sentence: ").lower()
+
+print("Vowels:", sum(1 for c in s if c in "aeiou"))
+print("Words:", len(s.split()))
+
+freq = {}
+for c in s:
+    if c != " ":
+        freq[c] = freq.get(c, 0) + 1
+print("Frequency:", freq)
